@@ -17,6 +17,9 @@
         [JsonProperty("user")]
         public UserModel User { get; set; }
 
+        [JsonProperty("genres")]
+        public string Genres { get; set; }
+
         public string[] SplitTitle()
         {
             Regex rgx = new Regex(@"\s-\s");

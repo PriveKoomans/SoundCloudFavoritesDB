@@ -37,6 +37,8 @@
 
             if (data != null)
                 Favorites.AddRange(data.Collection);
+            else
+                throw new Exception(string.Format("{0} - There was an error retrieving your favorites", DateTime.Now.ToString()));
 
             if (data.NextPage != null)
                 Task.Run(() => GetFavorites(data.NextPage));
